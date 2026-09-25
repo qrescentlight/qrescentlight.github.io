@@ -1,0 +1,1032 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+/* Het gehele document */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    /* cursor: none; */
+    /* scroll-behavior: smooth; */
+}
+
+/* turn cursor off */
+body, a {
+    cursor: none;
+}
+
+a {
+    display: block;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+button a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+
+.section {
+    min-height: 100vh;
+    width: 100vw;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+
+}
+
+/* text */
+h1 {
+    font-size: 3vw;
+    font-weight: 900;
+    text-align: left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    /* overflow:; */
+}
+
+.spanText {
+    color: green;
+    /* transition: color 0.1s ease-out; */
+    font-style: italic;
+    /* 
+    background: green;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+}
+
+.spanText:hover {
+    color: darkgreen;
+    /* background: darkgreen;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* background-color: black; */
+}
+
+/* .spanAni {
+    color: #1E1E1E;
+    animation: letter 2s;
+} */
+
+@-webkit-keyframes letter {
+    0% {
+        /* color: inherit; */
+    }
+
+    33% {
+        /* background: linear-gradient(red, black);
+        background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        color: black;
+    }
+
+    67% {
+        color: orangered;
+    }
+
+    100% {
+        /* background: #0A0A0A;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        /* color: green; */
+    }
+}
+
+@keyframes letter {
+    0% {
+        /* color: inherit; */
+    }
+
+    33% {
+        /* background: linear-gradient(red, black);
+        background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        color: black;
+    }
+
+    67% {
+        color: orangered;
+    }
+
+    100% {
+        /* background: #0A0A0A;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        /* color: green; */
+    }
+}
+
+
+.spanText div {
+    display: none;
+}
+
+p, #dropbox {
+    font-family: ff-good-web-pro-wide, 'Courier New', Courier, monospace, serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 125%;
+}
+
+@-webkit-keyframes artstat {
+    50% {
+        margin-right: 0.2%;
+    }
+}
+
+@keyframes artstat {
+    50% {
+        margin-right: 0.2%;
+    }
+}
+
+/* scrollbar */
+/* .scroll, */
+html {
+    /* scrollbar-color: #0A214C whitesmoke; */
+    scrollbar-width: thin;
+    -webkit-transition: scrollbar-color 1s;
+    -o-transition: scrollbar-color 1s;
+    transition: scrollbar-color 1s;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    -webkit-transition: 1s;
+    transition: 1s;
+    /* height: 5px; */
+}
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #0A0A0A;
+    /* outline: 1px solid #0A0A0A; */
+    /* height: 5px; */
+    /* border-radius: 50px; */
+}
+
+.scroll::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); */
+    background-color: whitesmoke;
+
+}
+
+.elder::-webkit-scrollbar-thumb {
+    background-color: wheat;
+    /* outline: 1px solid #0A0A0A; */
+    /* height: 5px; */
+    /* border-radius: 50px; */
+}
+
+.elder::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); */
+    background-color: #0A214C;
+}
+
+/* body::-webkit-scrollbar {
+    width: 0.7em;
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #c0392b;
+    height: 30px;
+}
+
+body::-webkit-scrollbar-track-piece {
+    display: none;
+} */
+
+/* .scroll::-webkit-scrollbar{
+    scrollbar-color: black grey;
+    /* scrollbar-gutter: black; 
+    scrollbar-width: thin;
+    color: #0A0A0A;
+} */
+
+
+
+/* Navigatiebalk */
+nav {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 8vh;
+    width: 100vw;
+    /* color: black; */
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.205); */
+    /* font-size:calc(0px + 1vw); */
+    font-size: 1vw;
+    mix-blend-mode: exclusion;
+    /* background-blend-mode: exclusion; */
+    z-index: 9;
+    pointer-events: none;
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+nav a {
+    /* position: fixed; */
+    /* mix-blend-mode: exclusion; */
+    padding: 1vh 1vw;
+    pointer-events: auto;
+    z-index: 9;
+}
+
+/* nav a {
+
+    padding: 1vh 1vw;
+} */
+
+
+
+nav li:hover {
+    /* mix-blend-mode: exclusion; */
+    background-color: orangered !important;
+    color: white !important;
+}
+
+/* nav a{
+    mix-blend-mode: exclusion;
+} */
+
+/* 
+nav li::after,nav a::after {
+    mix-blend-mode: normal;
+} */
+
+/* nav li:hover::after {
+    mix-blend-mode: normal;
+
+} */
+
+/* nav li:before, nav li:hover:before{
+    mix-blend-mode: normal;
+}
+nav li:after{
+    mix-blend-mode: normal;
+} */
+
+/* Logo naam */
+#name {
+    position: fixed;
+    display: block;
+    color: white;
+    bottom: -0.15vw;
+    left: 0.1vw;
+    mix-blend-mode: exclusion;
+    z-index: 9;
+}
+
+#name h1 {
+    font-size: 2vw;
+    margin-top: -0.5vw;
+}
+
+#name:hover {
+    color: pink;
+}
+
+/* Landingsectie */
+#landing {
+    background: url(../images/jonquil.png);
+    background-position: -10vw center;
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+    background-attachment: fixed;
+    background-origin: content-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#artistBlock {
+    position: absolute;
+    background-color: whitesmoke;
+    width: 63vw;
+    height: 35vh;
+    left: 9vw
+}
+
+#artistText {
+    position: absolute;
+    /* font-size: 3vw; */
+    width: 55vw;
+    padding: 5vw;
+    left: 5.5vw;
+}
+
+#artistText h1 {
+    text-align: right;
+}
+
+/* extra skills */
+#moreSkills {
+    /* locatie */
+    position: fixed;
+    left: -24vw;
+    top: 0vh;
+
+    /* vormgeving */
+    /* background-color: wheat; */
+    /* width: 20vw;
+height: 10vw; */
+    /* border-radius: 100%; */
+    -webkit-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    z-index: 5;
+    background-color: green;
+    color: wheat;
+    width: 13vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1vh 0vw 1vh 1vw;
+    font-size: 1vw;
+}
+
+#moreSkills button {
+    all: unset;
+    position: absolute;
+    /* left: 15vw; */
+    top: 50vh;
+    -webkit-transform: translate(10vw, -50%) rotate(90deg);
+        -ms-transform: translate(10vw, -50%) rotate(90deg);
+            transform: translate(10vw, -50%) rotate(90deg);
+    padding: 1vh 1vw;
+    height: 3vh;
+    background-color: green;
+    color: whitesmoke;
+    z-index: 8;
+}
+
+#moreSkills button:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* #moreSkills svg{
+    width: auto;
+    transform: translate(50%, 50%);
+    height: auto;
+} */
+
+/* g{
+    transform: translate(130px,100px);
+} */
+
+/* About Me Landingpage */
+#aboutLanding {
+    display: -ms-grid;
+    display: grid;
+            grid-template-areas:
+        'title profilepic'
+        'desc profilepic'
+        'missie missie'
+        'foto stage'
+        'skills skills'
+        'abSkill abSkill'
+        'cta cta'
+    ;
+    padding: 15vh 15vw 0vh;
+    width: 80vw;
+    font-size: 1.5vw;
+    font-weight: 500;
+    /* text-align: justify; */
+    height: auto;
+}
+
+.padding {
+    padding: 5vw 0vw;
+    /* height: 8vw; */
+}
+
+#aboutIkBen {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    font-size: 3vw;
+    font-weight: 900;
+    text-align: left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    grid-area: title;
+}
+
+.noshow {
+    /* color: rgba(255, 255, 255, 0); */
+    opacity: 0;
+    font-style: normal;
+}
+
+.show {
+    /* color: #0A0A0A */
+    opacity: 1;
+}
+
+#profilePic {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: profilepic;
+    position: relative;
+    float: right;
+    background: url(../images/profieldirtychai.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 27.5vw;
+    background-position: top;
+    width: 15vw;
+    left: -10vw;
+}
+
+#aboutIntro {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    width: 30vw;
+    padding-top: 5vw;
+    padding-right: 15vw;
+    padding-left: 15vw;
+    grid-area: desc;
+}
+
+#stageZin h1 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: missie;
+    text-align: right;
+    float: right;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    /* width: 60vw; */
+    /* padding-right: inherit 20vw; */
+    margin: 1vw 0vw;
+}
+
+#stagePic {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: foto;
+    background: url(../images/foto_jeugd.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 14.7vw;
+    margin-left: 15vw;
+}
+
+#aboutStage {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: stage;
+    width: auto;
+    margin-left: -25vw;
+    width: 30vw;
+    /* padding-right: 10vw; */
+}
+
+#skillsZin {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: skills;
+    width: 50vw;
+    margin-left: 15vw;
+}
+
+#skillsZin h1 {
+    text-align: center;
+    text-align: right;
+}
+
+#aboutSkills {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: abSkill;
+    width: 54vw;
+    display: -ms-grid;
+    display: grid;
+    margin-left: 15vw;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+#aboutSkills p {
+    position: relative;
+    width: 25vw;
+}
+
+#pLearn {
+    margin-left: 1vw;
+    float: right;
+}
+
+#ctaZin {
+    width: 50vw;
+
+}
+
+#aboutCta {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: cta;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#ctaButtons {
+    /* float: right; */
+    /* justify-content: end; */
+    margin-right: 15vw;
+}
+
+#ctaButtons button {
+    all: unset;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 900;
+    font-size: 1vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: green;
+    color: white;
+    width: 10vw;
+    padding: 0.7vw 1vw;
+    margin: 1vw;
+    margin-left: -10vw;
+}
+
+#ctaButtons button:hover {
+    background-color: #0A0A0A;
+    color: green;
+}
+
+/* #work {
+    display: block;
+    margin: auto 0vw;
+}
+
+#work li {
+    display: block;
+    text-align: center;
+    font-size: 4vw;
+    text-align: right;
+    width: 50vw;
+    height: 4.5vw;
+    padding-right: 0.8vw;
+}
+
+#projects {
+
+    padding: 15vh 0vh;
+    height: auto;
+    min-height: 100vh;
+    font-family: Proxima Nova Black, proxima-nova;
+} */
+
+/* Mijn werken en projecten */
+
+#projects {
+    padding: 15vh 0vh;
+    /* display: block; */
+}
+
+#projects .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* margin-left: 50vw; */
+    /* display: flex; */
+}
+
+#projects h1 {
+    /* text-align: left; */
+    mix-blend-mode: exclusion;
+    color: white;
+    padding: 0vh 0vw 5vw;
+}
+
+#work {
+    /* margin: 15vh 0vw; */
+    font-family: Proxima Nova Black, proxima-nova, sans-serif;
+    /* height: auto; */
+    width: 50vw;
+    z-index: 6;
+}
+
+#work li {
+    width: 50vw;
+    height: 4.5vw;
+    padding-right: 0.8vw;
+    text-align: right;
+    font-size: 4vw;
+}
+
+#contact {
+    background: wheat;
+    /* height: 100vh; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* position: absolute;
+    left: 50vw; */
+}
+
+#contact li {
+    /* position: absolute; */
+    margin-left: 50vw;
+    width: 50vw;
+    color: #0A214C;
+    font-size: 1.5vw;
+    padding: 0.2vh 0.5vw;
+}
+
+#contact li:hover {
+    background-color: #0A214C;
+    color: wheat;
+}
+
+/* mouse */
+
+.mouse {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 2vw;
+    height: 2vw;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 10;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    -webkit-transition: height 0.3s ease-out, width 0.3s ease-out, border-radius 0.3s ease-out;
+    -o-transition: height 0.3s ease-out, width 0.3s ease-out, border-radius 0.3s ease-out;
+    transition: height 0.3s ease-out, width 0.3s ease-out, border-radius 0.3s ease-out;
+}
+
+#dropbox {
+    position: fixed;
+    -webkit-transform: translate(1vw, 1vw);
+        -ms-transform: translate(1vw, 1vw);
+            transform: translate(1vw, 1vw);
+    /* display: none; */
+    /* background-color: #0AB0F5;     */
+    /* background-color: #0A0A0A; */
+    mix-blend-mode: normal;
+    width: 0vw;
+    height: auto;
+    /* z-index: inherit; */
+    /* color: whitesmoke; */
+    padding: 0vw 0.5vw;
+    -webkit-transition: height 0.6s ease-out, width 0.6s ease-out, border-radius 0.6s ease-out;
+    -o-transition: height 0.6s ease-out, width 0.6s ease-out, border-radius 0.6s ease-out;
+    transition: height 0.6s ease-out, width 0.6s ease-out, border-radius 0.6s ease-out;
+    font-size: 1.2vw;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    /* align-items: flex-end; */
+    /* float: bottom; */
+    font-family: consolas, 'Courier New', Courier, monospace;
+    color: #D4D4D4;
+    background-color: #1E1E1E;
+    /* text-align: justify; */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+#mouseOne, #mouseTwo {
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    background-color: white;
+    mix-blend-mode: exclusion;
+    /* left: 10%; */
+    /* margin: -1vw; */
+    left: 0vw;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+    top: 0vw;
+    /* margin-left: -2vw; */
+}
+
+#mouseOne {
+    margin-left: -1vw;
+
+}
+
+#mouseTwo {
+    margin-left: 1vw;
+    /* background-color: white; */
+}
+
+
+#double {
+    position: fixed;
+    /* mix-blend-mode: normal; */
+    /* 
+    width: auto;
+    height: auto; */
+    /* background-color: red; */
+
+    /* background-color: red; */
+    /* background: none */
+    /* transform: ; */
+    -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    display: none;
+}
+
+/* #mouse{
+    display: none;
+} */
+
+/* Projectpagina */
+#project {
+    background: whitesmoke;
+    /* display: grid; */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* width: 100vw; */
+    /* min-height: 100vh; */
+    padding: 10vh 0vh 5vh;
+    /* height: 90vh; */
+    scrollbar-width: thin;
+    scrollbar-color: #0AB0F5 whitesmoke;
+}
+
+#project h1 {
+    font-family: proxima nova condensed, proxima-nova, sans-serif;
+    font-weight: 900;
+    font-size: 5vw;
+    text-transform: uppercase;
+    background-color: #0AB0F5;
+}
+#projects #project h1{
+    mix-blend-mode: normal;
+    color:#0A0A0A;
+}
+
+#project div {
+    width: 60vw;
+    padding-top: 4vh;
+}
+
+#projectHead {
+    width: 60vw;
+    height: 30vw;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.nodeThumb {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0vw -50vh;
+    width: 60vw;
+    height: 30vw;
+}
+
+#nodeDesc {
+    font-size: 3vw;
+    /* line-height: 100%; */
+}
+
+#project img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 60vw;
+    height: auto;
+}
+
+#project p {
+    color: #0A0A0A;
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+
+#project #nodeDesc {
+    font-family: Proxima Nova Black, proxima-nova, sans-serif;
+    font-size: 2vw;
+}
+
+#projectTag {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 3fr;
+    grid-template-columns: 2fr 3fr;
+    padding-top: 4vh;
+}
+
+#project button {
+    all: unset;
+    font-size: 1vw;
+    padding: 2vh 2vw;
+    -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: #0AB0F5;
+    color: #0A0A0A;
+}
+
+#project button:hover {
+    background-color: #0A0A0A;
+    color: #0AB0F5;
+}
+
+#projectHead a {
+    position: absolute;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    left: 15vw;
+}
+
+#projectClose button:hover {
+    background-color: #0AB0F5;
+    color: #0A0A0A;
+}
+
+#projectClose button {
+    color: #0AB0F5;
+    background-color: #0A0A0A;
+}
+
+.postheader {
+    display: block;
+}
+
+#projectText p {
+    padding: 1vw 0vw;
+    width: 30vw;
+}
+
+#projectButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#projectButtons button {
+    position: relative;
+    margin: auto 5vw;
+    padding: auto;
+}
+
+
+#project::-webkit-scrollbar-thumb {
+    background-color: #0AB0F5;
+    /* outline: 1px solid #0A0A0A; */
+    /* height: 5px; */
+    /* border-radius: 50px; */
+}
+
+#project::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); */
+    background-color: whitesmoke;
+
+}
+
+
+.overlay {
+    /* position: fixed; */
+    /* left: 30px; */
+    /* top: 100px; */
+    /* z-index: 18; */
+    /* background-color: #0A0A0A; */
+    /* display: none; */
+    /* width: 100vw; */
+    height: 85vh;
+    width: 100vw;
+    /* background-color: whitesmoke; */
+    /* width: 20vw;
+    height: 20vw; */
+    position: fixed;
+    z-index: 6;
+    /* margin: 0%; */
+    top: 0;
+    /* left: 550px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* display: none; */
+    display: -ms-grid;
+    display: grid;
+    margin-left: 100vw;
+    -webkit-transition: margin-left 2s ease-in-out;
+    -o-transition: margin-left 2s ease-in-out;
+    transition: margin-left 2s ease-in-out;
+}
+
+#projectClose {
+    position: fixed;
+}
+
+/* #nodeDesc {
+    font-family: proxima-nova;
+    font-size: 2vw;
+    color: red;
+}
+
+#nodeProcess, #nodeMypart, #nodReflect {
+    font-size: 1.5vw;
+} */

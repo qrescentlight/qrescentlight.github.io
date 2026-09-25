@@ -1,0 +1,568 @@
+        body {
+            font-family: proxima-nova, sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            cursor: default;
+            cursor: none;
+        }
+
+        a {
+            cursor: none;
+        }
+
+        #name:hover {
+            color: pink;
+        }
+
+        p,
+        span div {
+            font-family: ff-good-web-pro-wide, proxima-nova, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        #landing {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            background: url(../images/jonquil.png);
+            background-position: -10vw center;
+            background-repeat: no-repeat;
+            background-size: 200vw auto;
+            background-attachment: fixed;
+            background-origin: content-box;
+        }
+
+        #artstat {
+            position: absolute;
+            font-size: 3vw;
+            width: 55vw;
+            z-index: 1;
+            text-align: end;
+            left: 5.5vw;
+            padding: 5vw;
+        }
+
+        #artblock {
+            position: absolute;
+            width: 63vw;
+            height: 35vh;
+            background-color: white;
+            z-index: 1;
+            left: 9vw;
+
+        }
+
+        /* #picture {
+            display: block;
+            display: none;
+            background-color: white;
+            width: 15vw;
+            height: 15vw;
+            position: absolute;
+            margin-left: 47.5vw;
+            margin-top: -20vh;
+            z-index: 3;
+            background: url(../images/profielpic.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        } */
+
+        .spanText {
+            color: green;
+            font-style: italic;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 8vh;
+            width: 100vw;
+            position: fixed;
+            z-index: 9;
+            font-size: 1vw;
+            color: white;
+            mix-blend-mode: exclusion;  
+        }
+
+        nav li, nav a {
+            pointer-events: auto;
+        }
+
+        nav:hover > a li:hover {
+            background-color: orangered;
+        }
+
+        #navlione,
+        #navlitwo,
+        #navlithree {
+
+            mix-blend-mode: exclusion;
+        }
+
+        #navlione:hover,
+        #navlitwo:hover,
+        #navlithree:hover {
+            background-color: orangered;
+            mix-blend-mode: difference;
+        } 
+
+        #about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0A0A0A;
+            height: auto;
+            display: block;
+            width: 100vw;
+            padding-bottom: 15vh;
+        }
+
+        #aboutP {
+            width: 50vw;
+        }
+
+        #work {
+            display: block;
+            margin: auto 0vw;
+        }
+
+        #work li {
+            display: block;
+            text-align: center;
+            font-size: 4vw;
+            text-align: right;
+            width: 50vw;
+            height: 4.5vw;
+            padding-right: 0.8vw;
+        }
+
+        #content {
+
+            padding: 15vh 0vh;
+            height: auto;
+            min-height: 100vh;
+            font-family: Proxima Nova Black, proxima-nova;
+        }
+
+        #about,
+        #content,
+        #contact {
+            transition: 1s;
+
+        }
+
+        #contact {
+            background: wheat;
+        }
+
+        .contentList {
+            -webkit-text-fill-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0vw -25vw;
+            background-clip: text;
+        }
+
+        .contentList:hover {
+            background: transparent;
+            -webkit-text-fill-color: #0A214C;
+            background-position: 0vw -25vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-clip: none;
+        }
+        
+        @keyframes artstat {
+            50% {
+                margin: 0.1%;
+            }
+        }
+
+        nav li {
+            padding: 1vh 1vw;
+        }
+
+        #about {
+            display: block;
+        }
+
+        .aboutSec {
+            display: block;
+            padding-top: 15vh;
+            padding-right: 15vw;
+            padding-left: 15vw;
+            width: 80vw;
+            font-size: 1.5vw;
+            font-weight: 500;
+            text-align: justify;
+            height: auto;
+        }
+
+        #secOne {
+            display: grid;
+            grid-template-areas:
+                'title profilepic'
+                'desc profilepic'
+            ;
+        }
+
+        #abone {
+            display: block;
+            grid-area: title;
+        }
+
+        #aboutP {
+            width: 30vw;
+            float: right;
+        }
+
+        #aboutOneCont {
+            width: 30vw;
+            padding-top: 5vw;
+            padding-right: 15vw;
+            padding-left: 15vw;
+            grid-area: desc;
+        }
+
+        h2 {
+            font-size: 2vw;
+            color: white;
+            font-weight: 900;
+        }
+
+        h1 {
+            font-size: 3vw;
+            font-weight: 900;
+            text-align: left;
+            width: fit-content;
+        }
+
+        h1 span {
+            font-style: italic;
+            color: green;
+        }
+
+        .noshow {
+            color: rgba(255, 255, 255, 0);
+            font-style: normal;
+        }
+
+        .show {
+            color: #0A0A0A
+        }
+
+        #picOne {
+            grid-area: profilepic;
+            position: relative;
+            float: right;
+            left: -10vw;
+            background: url(../images/profielsun.JPG);
+            background-repeat: no-repeat;
+            background-size: auto 25.7vw;
+            background-position: top;
+            width: 15vw;
+            transition: 1s;
+        }
+
+        .padding {
+            padding-top: 5vw;
+        }
+
+        #stage h1 {
+            text-align: right;
+            float: right;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        #watikkan {
+            width: 30vw;
+            padding-top: 5vw;
+            margin-left: -25vw;
+        }
+
+        #hulp {
+            padding-top: 4vw;
+            width: 40vw;
+            text-align: right;
+            margin-left: -35vw;
+            margin-top: -10vw;
+            display: none;
+        }
+
+        #name {
+            display: block;
+            color: white;
+            position: fixed;
+            margin: auto;
+            bottom: -0.15vw;
+            left: 0.1vw;
+            z-index: 5;
+            mix-blend-mode: difference;
+        }
+
+        #name h1 {
+            font-size: 2vw;
+            margin-top: -0.5vw;
+        }
+
+        #struggle {
+            background-color: gray;
+            margin: 5vw;
+            margin-left: 15vw;
+            background: url(../images/foto_jeugd.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 15vw;
+            height: 11.7vw;
+            font-size: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        #struggle div {
+            display: none;
+            grid-area: 1 / 4 / span 1 / span 2;
+        }
+
+        #struggle:hover div {
+            display: flex;
+            font-weight: 900;
+            color: white;
+        }
+
+        .ikben:hover {
+            transition: 1.2s ease-out;
+            color: darkgreen;
+        }
+
+        span div {
+            width: 0vw;
+            position: absolute;
+            margin-top: -8vh;
+            margin-left: 21vw;
+            padding: 1vh 0vw;
+            font-size: 1vw;
+            background-color: #0A0A0A;
+            color: white;
+            transition: 0.5s;
+            max-width: 0vw;
+            max-height: 6vw;
+            overflow: hidden;
+            font-style: normal;
+        }
+
+        span:hover div {
+            font-style: normal;
+            padding: 1vh 1vw;
+            width: auto;
+            transition: 1.2s ease-in-out;
+            max-width: 20vw;
+        }
+
+        #visdes {
+            margin: 1vw 0vw;
+            width: 50vw;
+        }
+
+        #buttons {
+            display: block;
+        }
+
+        #buttons button {
+            all: unset;
+            font-family: proxima-nova;
+            font-weight: 900;
+            font-size: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            color: white;
+            width: 10vw;
+            padding: 0.7vw 1vw;
+            margin: 1vw;
+            margin-left: -10vw;
+        }
+
+        #buttons button:hover {
+            background-color: #0A0A0A;
+            color: green;
+        }
+
+        #mouse {
+            position: fixed;
+            width: 3vw;
+            height: 3vw;
+            background: white;
+            z-index: 10;
+            mix-blend-mode: exclusion;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            top: -100vh;
+            left: -100vw;
+            transition: height 0.3s ease-out, width 0.3s ease-out, border-radius 0.3s ease-out;
+            border-radius: 100%;
+        }
+
+        #lione {
+            background-color: whitesmoke;
+            display: grid;
+            justify-content: center;
+            width: 100vw;
+            height: auto;
+            padding: 10vh 0vh;
+        }
+
+        #lione h1 {
+            font-family: proxima nova condensed;
+            font-weight: 900;
+            font-size: 5vw;
+            text-transform: uppercase;
+            background-color: #0AB0F5;
+        }
+
+        #lione div {
+            width: 60vw;
+            padding-top: 4vh;
+        }
+
+        #lionepic {
+            width: 60vw;
+            height: 30vw;
+            align-items: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nodeThumb {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0vw -50vh;
+            width: 60vw;
+            height: 30vw;
+        }
+
+        img {
+            object-fit: cover;
+            width: 60vw;
+            height: auto;
+        }
+
+        #lione p {
+            color: #0A0A0A;
+            padding: 1vw;
+            font-size: 1vw;
+        }
+
+        #lionetog {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            padding-top: 4vh;
+        }
+
+        #lione button {
+            all: unset;
+            font-size: 1vw;
+            padding: 2vh 2vw;
+            color: #0AB0F5;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+            background-color: #0A0A0A;
+        }
+
+        #lione button:hover {
+            background-color: #0AB0F5;
+            color: #0A0A0A;
+        }
+
+        #lionepic a {
+            position: absolute;
+            align-self: flex-start;
+            left: 15vw;
+        }
+
+        #lionepic button {
+            background-color: #0AB0F5;
+            color: #0A0A0A;
+        }
+
+        #lionepic button:hover {
+            color: #0AB0F5;
+            background-color: #0A0A0A;
+        }
+
+        .postheader {
+            display: block;
+        }
+
+        #lionego p {
+            padding: 1vw 0vw;
+            width: 30vw;
+        }
+
+        #btndiv {
+            display: flex;
+            position: relative;
+            justify-content: center;
+        }
+
+        #btndiv button {
+            position: relative;
+            margin: auto 5vw;
+            padding: auto;
+        }
+
+        .divc {
+            z-index: 7;
+        }
+
+        #condiv,
+        #form {
+            display: none;
+            position: absolute;
+            width: 20vw;
+            height: 10vw;
+            background-color: brown;
+            z-index: 7;
+        }
+
+        #form {
+            background-color: darkolivegreen;
+        }
+
+        #conul {
+            position: absolute;
+            left: 50vw;
+            color: #0A214C;
+        }
+
+        #conul {
+            font-size: 1vw;
+            width: auto;
+        }
+
+        #conul li {
+            padding: 0.2vh 0.5vw;
+
+        }
+
+        #conul li:hover {
+            background-color: #0A214C;
+            color: wheat;
+            width: 50vw;
+        }   
+        
