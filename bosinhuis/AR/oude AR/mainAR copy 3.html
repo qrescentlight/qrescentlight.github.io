@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het bos in huis</title>
+
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 300px;
+            align-items: center;
+            justify-content: center;
+            right: 0px;
+            left: 0px;
+            margin: auto;
+        }
+
+        .ballon {
+            background-color: white;
+            border-radius: 45px;
+            height: auto;
+            width: 240px;
+            padding: 25px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+
+        .boswachter {
+            position: absolute;
+            bottom: 15px;
+            left: 25px;
+        }
+
+        .boswachter img {
+            height: 250px;
+            width: auto;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #uitleg,
+        #groet {
+            font-size: 4vw;
+            text-align: center;
+            width: 80vw;
+            height: 80vh
+        }
+
+        audio {
+            visibility: hidden;
+        }
+
+        @keyframes bramEnter {
+            0% {
+                margin-left: -300px;
+            }
+
+            100% {
+                margin-left: 0px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #blaadjesContainer,
+        #nestContainer,
+        #vogelContainer,
+        #dagContainer,
+        #dag {
+            display: none;
+        }
+
+        .fixedButton {
+            position: fixed;
+            text-align: center;
+            top: 80%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+        }
+
+        #drieBtn,
+        #zesBtn,
+        #eenBtn {
+            display: none;
+            z-index: 10;
+        }
+
+        #scan {
+            display: none;
+            position: fixed;
+            text-align: center;
+            padding: 5%;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgba(255, 255, 255, 0.7);
+            animation: scanDown 1.5s ease-out;
+        }
+
+        @keyframes scanDown {
+            0% {
+                top: -15%
+            }
+
+            33% {
+                top: -15%
+            }
+        }
+
+        button {
+            padding: 5px;
+        }
+
+        #backBtn {
+            top: 0%;
+            right: 95%;
+            margin: none;
+            opacity: 80%;
+        }
+    </style>
+</head>
+
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/dev/aframe/build/aframe-ar.js"></script>
+
+
+
+<body style='margin : 0px; overflow: hidden;'>
+
+
+    <!-- geduld 
+    <h1 id="geduld">Het spel is aan het laden, even geduld alstublieft.</h1>-->
+
+    <!-- AR.js -->
+    <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;' vr-mode-ui="enabled: false">
+        <a-marker preset='hiro'>
+
+            <a-image rotation="-90 0 0" width="1" height="1" src="#imgTest"></a-image>
+        </a-marker>
+        <a-assets>
+            <img id="imgTest" src="images/logo.png">
+        </a-assets>
+        <a-camera-static />
+    </a-scene>
+
+    <!-- audio -->
+    <audio controls id="blaadjesopdracht">
+        <source src="audio/blaadjesopdracht.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="blaadjesCOMPLETED">
+        <source src="audio/blaadjesCOMPLETED.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="Vogelnestopdracht">
+        <source src="audio/Vogelnestopdracht.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="VogelnestCOMPLETED">
+        <source src="audio/VogelnestCOMPLETED.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="VogelCOMPLETED">
+        <source src="audio/VogelCOMPLETED.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="fluiten">
+        <source src="audio/fluiten.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="gezellig">
+        <source src="audio/gezellig.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="goedgedaan">
+        <source src="audio/goedgedaan.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="trots">
+        <source src="audio/trots.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- fixed on screen -->
+    <section defer id="screen">
+
+        <!-- probeer de marker in beeld te krijgen -->
+        <div class="container">
+            <h1 id="scan">Richt de camera op één van onze paaltjes.</h1>
+        </div>
+
+        <!-- blaadjes opdracht -->
+
+        <!-- blaadjes container -->
+        <div class="container" id="blaadjesContainer">
+
+            <!-- zoek drie blaadjes -->
+            <div class="ballon text" id="blaadjes">
+                <h2>Bram de Boswachter</h2>
+                Mijn lievelingskleur is groen. Dat kunnen jullie zeker wel zien aan mijn pak en aan het bos! Welke
+                kleuren zien jullie nog meer in de natuur? Zoek 3 blaadjes die allemaal een andere kleur hebben.
+                <br><br><button id="blaadjesBtn">Zoek 3 blaadjes</button>
+            </div>
+
+            <!-- je hebt drie blaadjes gevonden -->
+            <div class="ballon text" id="bladGevonden" style="display: none;">
+                <h2>Bram de Boswachter</h2>
+                Wist je dat rupsen graag bladeren eten? Dan vind ik een patatje toch echt lekkerder hoor!
+                <br><br><button id="gevondenBtn">Op naar het volgende paaltje!</button>
+            </div>
+
+            <!-- boswachter bram -->
+            <div class="boswachter"><img src="images/bram.png" alt="Boswachter Bram" id="bramBlad"></div>
+
+        </div>
+
+        <!-- vogel nest opdracht -->
+
+        <!-- nestjes container -->
+        <div class="container" id="nestContainer">
+
+            <!-- bouw een nestje -->
+            <div class="ballon text" id="nest">
+                <h2>Bram de Boswachter</h2>
+                Oh nee! Kun jij me helpen om een vogelnestje te maken? De vogels uit het bos kunnen nergens een nestje
+                maken. Zoek 6 takken bij elkaar en maak je eigen nestje, zodat de vogels weer een plekje hebben.
+                <br><br><button id="nestBtn">Zoek 6 takken</button>
+            </div>
+
+            <!-- je hebt drie blaadjes gevonden -->
+            <div class="ballon text" id="nestGemaakt" style="display: none;">
+                <h2>Bram de Boswachter</h2>
+                Vogels hebben vaak een nestje hoog in de boom, dan kunnen ze goed kijken wat er in het bos gebeurd.
+                <br><br><button id="gemaaktBtn">Op naar het volgende paaltje!</button>
+            </div>
+
+            <!-- boswachter bram -->
+            <div class="boswachter"><img src="images/bram.png" alt="Boswachter Bram" id="bramNest"></div>
+
+        </div>
+
+        <!-- vogel opdracht -->
+
+        <!-- vogel container -->
+        <div class="container" id="vogelContainer">
+
+            <!-- fluit een liedje -->
+            <div class="ballon text" id="vogel">
+                <h2>Bram de Boswachter</h2>
+                Ik ben dol op liedjes zingen, net zoals vogels. Vogels zingen namelijk ook liedjes. Dat doen vogels door
+                te fluiten. Kun jij eens proberen te fluiten?
+                <br><br><button id="vogelBtn">Fluit een liedje</button>
+            </div>
+
+            <!-- je hebt een liedje gefloten -->
+            <div class="ballon text" id="liedGefloten" style="display: none;">
+                <h2>Bram de Boswachter</h2>
+                Wist je dat vogels fluiten om aan andere vogels te laten weten waar ze zitten? Best handig!.
+                <br><br><button id="geflotenBtn">Op naar het volgende paaltje!</button>
+            </div>
+
+            <!-- boswachter bram -->
+            <div class="boswachter"><img src="images/bram.png" alt="Boswachter Bram" id="bramVogel"></div>
+
+        </div>
+
+        <!-- afscheid nemen -->
+
+        <!-- dag container -->
+        <div class="container" id="dagContainer">
+
+            <!-- zeg maar dag! -->
+            <div class="ballon text" id="dag">
+                <h2>Bram de Boswachter</h2>
+                <div id="dagText"></div>
+                <br><button id="dagBtn"><a href="../main.html">Tot de volgende keer!</a></button>
+            </div>
+
+            <!-- boswachter bram -->
+            <div class="boswachter"><img src="images/bram.png" alt="Boswachter Bram" id="bramDag"></div>
+
+        </div>
+
+        <!-- knop tijdens het zoeken -->
+        <button id="zesBtn" class="fixedButton">Ik heb zes takjes gevonden!</button>
+        <button id="drieBtn" class="fixedButton">Ik heb drie blaadjes gevonden!</button>
+        <button id="eenBtn" class="fixedButton">Ik heb een liedje gefloten!</button>
+        <button id="backBtn" class="fixedButton"><a>Sluit af</a></button>
+
+
+
+    </section>
+
+    <script>
+        let time = 1000;
+
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById("scan").style.display = "block";
+            }, time);
+        }
+
+        // blaadjesopdracht
+        document.getElementById("blaadjesBtn").onclick = function () {
+            document.getElementById("blaadjesContainer").style.display = "none";
+            document.getElementById("bramBlad").style.display = "none";
+            document.getElementById("drieBtn").style.display = "block";
+            document.getElementById("blaadjesopdracht").pause();
+
+            document.getElementById("eenBtn").style.transform = "translateY(10vh)";
+            document.getElementById("zesBtn").style.transform = "translateY(10vh)";
+        }
+
+        document.getElementById("drieBtn").onclick = function () {
+            document.getElementById("drieBtn").style.display = "none";
+            document.getElementById("blaadjesContainer").style.display = "block";
+            document.getElementById("bramBlad").style.display = "block";
+            document.getElementById("blaadjes").style.display = "none";
+
+            document.getElementById("bramBlad").onanimationend = function () {
+                document.getElementById("bladGevonden").style.display = "block";
+                document.getElementById("blaadjesCOMPLETED").play();
+                document.getElementById("blaadjesopdracht").pause();
+            }
+        }
+
+        document.getElementById("bladGevonden").onclick = function () {
+            document.getElementById("blaadjesContainer").style.display = "none";
+            document.getElementById("bramBlad").style.display = "none";
+            document.getElementById("blaadjesCOMPLETED").pause();
+            setTimeout(() => {
+                /*location.reload();*/
+                document.getElementById("scan").style.display = "block";
+
+                execute = function () {
+                    var i = random();
+                    console.log(i);
+                    array.push(i);
+                    console.log(array);
+
+                    eval('func' + i + '()');
+                    eval('gif' + i + '()');
+
+                    execute = function () { };
+                }
+            }, time);
+        }
+
+        // vogelnestjesopdracht
+        document.getElementById("nestBtn").onclick = function () {
+            document.getElementById("nestContainer").style.display = "none";
+            document.getElementById("bramNest").style.display = "none";
+            document.getElementById("zesBtn").style.display = "block";
+            document.getElementById("Vogelnestopdracht").pause();
+
+            document.getElementById("eenBtn").style.transform = "translateY(10vh)";
+            document.getElementById("drieBtn").style.transform = "translateY(10vh)";
+        }
+
+        document.getElementById("zesBtn").onclick = function () {
+            document.getElementById("zesBtn").style.display = "none";
+            document.getElementById("nestContainer").style.display = "block";
+            document.getElementById("bramNest").style.display = "block";
+            document.getElementById("nest").style.display = "none";
+
+            document.getElementById("bramNest").onanimationend = function () {
+                document.getElementById("nestGemaakt").style.display = "block";
+                document.getElementById("VogelnestCOMPLETED").play();
+                document.getElementById("Vogelnestopdracht").pause();
+            }
+        }
+
+        document.getElementById("nestGemaakt").onclick = function () {
+            document.getElementById("nestContainer").style.display = "none";
+            document.getElementById("bramNest").style.display = "none";
+            document.getElementById("VogelnestCOMPLETED").pause();
+            setTimeout(() => {
+                /*location.reload();*/
+                document.getElementById("scan").style.display = "block";
+
+                execute = function () {
+                    var i = random();
+                    console.log(i);
+                    array.push(i);
+                    console.log(array);
+
+                    eval('func' + i + '()');
+                    eval('gif' + i + '()');
+
+                    execute = function () { };
+                }
+            }, time);
+        }
+
+
+        // vogelsopdracht
+        document.getElementById("vogelBtn").onclick = function () {
+            document.getElementById("vogelContainer").style.display = "none";
+            document.getElementById("bramVogel").style.display = "none";
+            document.getElementById("eenBtn").style.display = "block";
+            document.getElementById("fluiten").pause();
+
+            document.getElementById("drieBtn").style.transform = "translateY(10vh)";
+            document.getElementById("zesBtn").style.transform = "translateY(10vh)";
+        }
+
+        document.getElementById("eenBtn").onclick = function () {
+            document.getElementById("eenBtn").style.display = "none";
+            document.getElementById("vogelContainer").style.display = "block";
+            document.getElementById("bramVogel").style.display = "block";
+            document.getElementById("vogel").style.display = "none";
+
+            document.getElementById("bramVogel").onanimationend = function () {
+                document.getElementById("liedGefloten").style.display = "block";
+                document.getElementById("VogelCOMPLETED").play();
+                document.getElementById("fluiten").pause();
+            }
+        }
+
+        document.getElementById("liedGefloten").onclick = function () {
+            document.getElementById("vogelContainer").style.display = "none";
+            document.getElementById("bramVogel").style.display = "none";
+            document.getElementById("VogelCOMPLETED").pause();
+            setTimeout(() => {
+                /*location.reload();*/
+                document.getElementById("scan").style.display = "block";
+
+                execute = function () {
+                    var i = random();
+                    console.log(i);
+                    array.push(i);
+                    console.log(array);
+
+                    eval('func' + i + '()');
+                    eval('gif' + i + '()');
+
+                    execute = function () { };
+                }
+            }, time);
+        }
+
+
+
+
+        // find marker
+        var m = document.querySelector("a-marker");
+
+        let array = [];
+
+        function random() {
+            var i = Math.floor(Math.random() * 20) % 4;
+            if (i <= 0 || array.includes(i)) return random();
+            return i;
+        }
+
+        function execute() {
+            var i = random();
+            console.log(i);
+            array.push(i);
+            console.log(array);
+
+            eval('func' + i + '()');
+            eval('gif' + i + '()');
+
+            execute = function () { };
+        }
+
+        // random animals
+        /*let imgSrc = ["gifs/vos.gif", "gifs/specht.gif", "gifs/kever.gifs"];*/
+
+        function gif1() {
+            document.getElementById("imgTest").src = "gifs/vos.gif";
+            /*document.getElementById("imgTest").src = "images/specht.png";*/
+        };
+
+        function gif2() {
+            document.getElementById("imgTest").src = "gifs/specht.gif";
+            /*document.getElementById("imgTest").src = "images/havik.png";*/
+        };
+
+        function gif3() {
+            document.getElementById("imgTest").src = "gifs/kever.gif";
+            /*document.getElementById("imgTest").src = "images/kraanvogel.png";*/
+        };
+
+        m.addEventListener("markerFound", (e) => {
+            execute();
+        });
+
+        // random opdrachten
+        // blaadjes
+        function func1() {
+            document.getElementById("scan").style.display = "none";
+            document.getElementById("blaadjesContainer").style.display = "block";
+            document.getElementById("bramBlad").style.animation = "bramEnter 1s ease-out";
+            document.getElementById("bramBlad").onanimationend = function () {
+                document.getElementById("blaadjesopdracht").play();
+                document.getElementById("blaadjes").style.display = "block";
+            }
+        }
+
+        // vogelnest
+        function func2() {
+            document.getElementById("scan").style.display = "none";
+            document.getElementById("nestContainer").style.display = "block";
+            document.getElementById("bramNest").style.animation = "bramEnter 1s ease-out";
+            document.getElementById("bramNest").onanimationend = function () {
+                document.getElementById("Vogelnestopdracht").play();
+                document.getElementById("nest").style.display = "block";
+            }
+        }
+
+        // vogels
+        function func3() {
+            document.getElementById("scan").style.display = "none";
+            document.getElementById("vogelContainer").style.display = "block";
+            document.getElementById("bramVogel").style.animation = "bramEnter 1s ease-out";
+            document.getElementById("bramVogel").onanimationend = function () {
+                document.getElementById("fluiten").play();
+                document.getElementById("vogel").style.display = "block";
+            }
+        }
+
+
+        /*// once
+        function once(fn, context) {
+            var result;
+            return function () {
+                if (fn) {
+                    result = fn.apply(context || this, arguments);
+                    fn = null;
+                }
+                return result;
+            };
+        }*/
+
+        let dagArray = ["Het was erg gezellig vandaag, zie ik je snel nog een keertje? Doei doei!", "Dankjewel voor het helpen vandaag, je mag heel erg trots zijn op jezelf!", "Je hebt het heel goed gedaan vandaag, dankjewel!"];
+        let dagSrc = ["gezellig", "trots", "goedgedaan"];
+
+        document.getElementById("backBtn").onclick = function () {
+            let r = random() - 1;
+
+            document.getElementById("backBtn").style.display = "none";
+            document.getElementById("scan").style.display = "none";
+            document.getElementById("dagContainer").style.display = "block";
+            document.getElementById("bramDag").style.animation = "bramEnter 1s ease-out";
+            document.getElementById("dagText").innerText = dagArray[r];
+            document.getElementById("bramDag").onanimationend = function () {
+                document.getElementById(dagSrc[r]).play();
+                document.getElementById("dag").style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

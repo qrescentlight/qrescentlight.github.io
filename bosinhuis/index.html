@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het bos in huis</title>
+    <link rel="stylesheet" href="https://use.typekit.net/dqa3tqf.css">
+    <style>
+                body {
+            background-color: grey;
+        }
+
+        .text {
+            position: absolute;
+            display: block;
+            bottom: 40vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ballon {
+            background-color: white;
+            border-radius: 45px;
+            height: auto;
+            width: 70vw;
+            padding: 25px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+
+        .boswachter {
+            position: absolute;
+            bottom: 15px;
+            left: 25px;
+        }
+
+        .boswachter img {
+            height: 35vh;
+            width: auto;
+        }
+
+        #bram {
+            display: none;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        #uitlegContainer {
+            display: flex;
+        }
+
+        #uitleg, #groet {
+            font-size: 4vw;
+            text-align: center;
+            width: 80vw;
+            height: 80vh
+        }
+
+        #groetContainer {
+            display: none;
+        }
+
+        audio {
+            visibility: hidden;
+        }
+
+        @keyframes bramEnter {
+            0% {
+                margin-left: -300px;
+            }
+            100% {
+                margin-left: 0px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        body {
+            font-family: source-sans-pro, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .ballon {
+            background: white;
+            border-radius: .4em;
+        }
+
+        .ballon:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: white;
+            border-bottom: 0;
+            border-left: 0;
+            margin-left: -10px;
+            margin-bottom: -20px;
+        }
+
+        button,
+        #start {
+            font-family: source-sans-pro, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            width: 181px;
+            height: 52px;
+            background-color: #9DD484;
+            position: absolute;
+            box-shadow: 0px 5px #00000034;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+
+        }
+
+        button:hover,
+        #start:hover {
+            background-color: #BEFEA0;
+        }
+
+        button:active,
+        #start:active {
+            background-color: #506F42;
+            box-shadow: 0px 0px #00000034;
+        }
+
+        #uitlegContainer {
+            display: none;
+            width: 80vw;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.671);
+            margin: 5%;
+            padding: 5%;
+            border-radius: 40px;
+        }
+
+        #uitleg {
+            height: auto;
+        }
+
+        #btnContainer {
+            display: flex;
+        }
+
+        #logo {
+            padding: 5%;
+            width: 90%;
+            margin: auto;
+            margin-top: -15%;
+            max-width: 400px;
+        }
+
+        h2 {
+            color: #007C00;
+        }
+
+        button h2 {
+            color: black;
+        }
+
+        #help {
+            height: auto;
+            width: auto;
+            padding: 0% 5%;
+        }
+
+        .ballon {
+            box-shadow: 0px 5px #00000034;
+            border-radius: 45px;
+        }
+
+        button {
+            border-radius: 5px;
+        }
+
+        #logo {
+            animation: logoDown 1.5s ease;
+        }
+
+        #binnen,
+        #buiten,
+        #settings,
+        #btnDiv {
+            animation: menuUp 2s ease-out;
+        }
+
+        @keyframes logoDown {
+            0% {
+                margin-top: -100%;
+            }
+
+            90% {
+                margin-top: -15%;
+            }
+        }
+
+        @keyframes menuUp {
+            0% {
+                opacity: 0%;
+            }
+
+            66% {
+                opacity: 0%;
+            }
+        }
+
+        #bramtext {
+            height: auto;
+            display: none;
+        }
+    </style>
+</head>
+
+<body
+    style='margin : 0px; overflow: hidden; background-image: url("AR/images/voorpagina.png"); background-color: #daeaf8; background-repeat: no-repeat; object-fit:cover; background-position: center; background-attachment: fixed;'>
+
+    <audio controls id="opening">
+        <source src="AR/audio/Opening.mp3" type="audio/mp3" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+
+    <section defer id="screen">
+        <div class="container" id="btnContainer">
+            <img src="AR/images/logo.png" alt="Het hos in huis-logo" id="logo">
+            <div id="btnDiv">
+                <button class="menuBtn" style="top: 70%;" id="binnen"><a href="https://v95zx0.axshare.com/#id=uqxsi5&p=keuze_voor_verhalen">Binnenverhalen</a></button>
+                <button class="menuBtn" style="top: 80%;" id="buiten">Buitenverhalen</button>
+                <button class="menuBtn" style="top: 90%;" id="settings">Instellingen</button>
+            </div>
+        </div>
+
+        <div class="container" id="uitlegContainer">
+            <div id="uitleg">
+                <h1>Welkom bij de buitenverhalen! Hier kun je spelletjes en opdrachten spelen om de boswachters te
+                    helpen.
+                    Buiten kun je overal paaltjes vinden met ons logo. Richt de camera op één van onze paaltjes om de
+                    boswachters te helpen!
+                    <br><br>
+                    <button id="start">Help de boswachters</button><br>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container" id="bram">
+            <div class="ballon text" id="bramtext">
+                <h2>Bram de Boswachter</h2>
+                Hallo, ik ben Bram de Boswachter. Ik heb gehoord dat jij mij vandaag
+                komt
+                helpen. Laten we snel
+                beginnen!
+                <br><br><button id="help"><a href="AR/mainAR.html">
+                        <h2>Help Bram</h2>
+                    </a></button><br><br>
+            </div>
+            <div class="boswachter"><img src="AR/images/bram.png" alt="Boswachter Bram" id="bramImg"></div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("buiten").onclick = function () {
+            document.getElementById("btnContainer").style.display = "none";
+            document.getElementById("uitlegContainer").style.display = "flex";
+        };
+
+        document.getElementById("start").onclick = function () {
+            document.getElementById("uitlegContainer").style.display = "none";
+            document.getElementById("bram").style.display = "flex";
+            document.getElementById("bramImg").style.animation = "bramEnter 1s ease-out";
+
+            setTimeout(function () {
+                document.getElementById("bramtext").style.display = "block";
+                document.getElementById("opening").play();
+            }, 1000);
+        };
+
+        document.getElementById("help").onclick = function () {
+            document.getElementById("opening").pause();
+            document.getElementById("screen").style.display = "none";
+        };
+
+        document.documentElement.onclick = window.onclick = function () {
+            document.getElementById("logo").style.animationDuration = "0s";
+            document.getElementById("logo").style.animationFillMode = "forwards";
+
+            document.getElementById("binnen").style.animationDuration = "0s";
+            document.getElementById("binnen").style.animationFillMode = "forwards";
+            document.getElementById("buiten").style.animationDuration = "0s";
+            document.getElementById("buiten").style.animationFillMode = "forwards";
+            document.getElementById("settings").style.animationDuration = "0s";
+            document.getElementById("settings").style.animationFillMode = "forwards";
+            document.getElementById("btnDiv").style.animationDuration = "0s";
+            document.getElementById("btnDiv").style.animationFillMode = "forwards";
+
+
+            /*document.getElementById("logo").classList.add = "disable-css-transitions";
+            document.getElementById("binnen").classList.add = "disable-css-transitions";
+            document.getElementById("buiten").classList.add = "disable-css-transitions";
+            document.getElementById("settings").classList.add = "disable-css-transitions";
+            document.getElementById("btnDiv").classList.add = "disable-css-transitions";
+            alert("something");*/
+
+        }
+    </script>
+</body>
+
+</html>
