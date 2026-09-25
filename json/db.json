@@ -1,0 +1,138 @@
+{
+   "items": [
+      {
+         "id": "hbih",
+         "name": "Het Bos in Huis",
+         "desc": [
+            "Het Bos in Huis is een mobilegame om kinderen meer te leren over de dieren in het bos en naar buiten te krijgen.",
+            "In het AR-prototype is het de bedoeling dat je de Hiro-marker scant. Wanneer je het prototype de marker herkent, krijg je één van onze drie willekeurige spelletjes. Wanneer je deze uitspeelt, kun je de marker weer scannen voor één van de overgebleven spelletjes en daarna de laatste. Als het spel is uitgespeeld, kun je één van onze willekeurige diertjes zien.",
+            "Het is echt gemaakt voor de mobiele telefoon. Ik heb het hele 'buitenverhalen'-onderdeel gecodeerd in HTML, CSS en JavaScript met behulp van AR.js. Daarnaast heb ik een groot aandeel geleverd in de concepting en heb ik het meeste interactie gedaan in het Axure-prototype. Ik heb deze game samen met mijn projectgroep gemaakt voor het vak Project Prototyping.",
+            "Scan de hiro-marker met jouw telefoon."
+         ],
+         "link": "https://remcopramudita.nl/bosinhuis/",
+         "images": [
+            "bosinhuis_2.gif",
+            "pattern-final_icon.png"
+         ]
+      },
+      {
+         "id": "per",
+         "name": "Hoe maak ik keuzes?",
+         "desc": [
+            "Een customer journey voor een fictieve journaling app om mensen te helpen om keuzes te kunnen maken.",
+            "Het onderwerp van mijn concept is het maken van keuzes. Dit gedrag gaan wij duurzaam verbeteren met behulp van een app en cognitieve gedragstherapie.",
+            "We gaan bezig met de drie hoofdvragen:<br> *  Hoe maak ik keuzes?<br> *  Hoe ga ik om met de uitkomsten van mijn keuzes?<br> *  Wat houdt mij tegen om keuzes te maken?<br> Deze drie hoofdvragen pakken respectievelijk het heden, de toekomst en het verleden aan.<br> De hele aanpak is gebaseerd op cognitieve gedragstherapie.",
+            "Dit heb ik voor het vak Persuasion gemaakt."
+         ],
+         "link": "https://remcopramudita.nl/persuasion/",
+         "images": [
+            "customerjourney.gif",
+            "perinh.jpg",
+            "perapp.jpg",
+            "percust.jpg"
+         ]
+      },
+      {
+         "id": "sto",
+         "name": "Emotionele Mishandeling",
+         "desc": [
+            "Een VR-applicatie om mensen te leren hoe het is om emotionele mishandeling te ervaren en om hulpverleners te leren hoe je overlevers van emotionele mishandeling kunt herkennen.",
+            "In tegenstelling tot fysieke of seksuele mishandeling zijn de meeste mensen minder bekend met emotionele mishandeling. Emotionele mishandeling, ook wel psychische of geestelijke mishandeling of misbruik, is echter meer dan iemand uitschelden of discrimineren. Emotionele verwaarlozing is ook een vorm van mishandeling, en het komt dan ook vaak voor dat de mishandelaars geen slechte intenties hadden. <br><br> De gevolgen van emotionele mishandeling zijn daarentegen net zo groot als die van fysieke of seksuele mishandeling, als niet groter. Als overlevende van emotionele mishandeling (want wij zijn overlevenden; geen slachtoffers) weet ik maar al te goed waartoe emotionele mishandeling kan leiden. Zo kan het bijvoorbeeld leiden tot een laag zelfvertrouwen, verwarring omtrent iemands gender of seksualiteit, angststoornissen, depressies, aandachtstoornissen, automutilatie of dissociatie. ",
+            "Het eindconcept is een tweedelige VR ervaring. Het eerste deel bestaat uit het ervaren van emotionele mishandeling aan de hand van waargebeurde verhalen. Het tweede deel bestaat uit het herkennen van mensen die emotioneel mishandeling hebben ervaren en wat je kunt doen om deze mensen te helpen.",
+            "Het prototype is in BlocksmithXR gemaakt voor het vak Storytelling XR. Ik heb mij vooral bezig gehouden met de concepting en de interactie in Blocksmith."
+         ],
+         "link": "https://my.blocksmithxr.com/embed/57272",
+         "images": [
+            "vrsto.gif"
+         ]
+      },
+      {
+         "id": "nad",
+         "name": "Van Muziek tot Heldenreis",
+         "desc": [
+            "Van Muziek tot Heldenreis is een interactief concept om een verhaal te maken aan de hand van de Heldenreis door muziek te spelen op een fysieke pianomat.",
+            "Je maakt je eigen verhaal aan de hand de hero's journey. Je bepaalt de keuzes in het verhaal door noten te spelen op onze pianomat. Elke noot die je speelt krijg en hardop te horen. <br><br> Wij hebben de twaalf fasen van de hero's journey verdeeld over 16 vlakken. Op deze vlakken krijg je de beelden terug te zien die bij de gespeelde noten horen. Zo kun je een storyboard zien van het verhaal dat je componeert. <br><br> Nadat alle vlakken gevuld zijn, kun je je eigen verhaal bekijken. Het verhaal wordt als een grote animatie op het beeldscherm laten zien. De noten die je gespeeld hebt krijg je ook weer te horen.<br><br> In ons concept komen muziek, keuzes, beeld en de hero's journey samen als storytelling. Het is belangrijk dat alle elementen wel een duidelijk terugkomen.",
+            "Het doel van ons concept is om op een speelse manier anderen te informeren over storytelling en de hero's journey, en ze daarmee te activeren om meer storytelling tot zich te nemen. Daarnaast willen we laten zien dat muziek ook een vorm van storytelling is. Als laatste willen we ook gewoon mensen vermaken.",
+            "Ik heb de code geschreven en de characters geschetst."
+         ],
+         "link": "https://remcopramudita.nl/heldenreis/",
+         "images": [
+            "hero.gif",
+            "IMAG0757.jpg",
+            "IMAG0758.jpg",
+            "IMAG0759.jpg",
+            "unknowzzzn.png",
+            "scrnshotsong.png"
+         ]
+      },
+      {
+         "id": "labs",
+         "name": "Second Chance",
+         "desc": [
+            "Second Chance is de mobile game die wij in samenwerking met stichting Braive maken om jongere te helpen te informeren over hun geestelijke gezondheid, te helpen reflecteren en om betere keuzes te maken.",
+            "Second Chance is een narrative driven 3D mobile game waar je keuzes het verhaal beïnvloeden. Deze maak ik met mijn projectgroep voor het vak User Labs.",
+            "Dit is de poster die ik heb gemaakt om ons concept en het verhaal te visualiseren. Je begint rechtsonderin met het bekijken van het concept. Bovenin staat het verhaal gevisualiseerd in drie actes en de lessen die we daarbij willen meegeven.",
+            "Ik ben sinds kort begonnen met illustreren en ik wil die vaardigheid graag verder ontwikkelen."
+         ],
+         "link": "https://remcopramudita.nl/labs/poster.png",
+         "images": [
+            "poster.png",
+            "poster.png"
+         ]
+      },
+      {
+         "id": "ca",
+         "name": "Rode planten",
+         "desc": [
+            "Een visueel verslag naar mijn ontwikkeling als Change Agent",
+            "'Rode planten' verwijst naar het voorbeeld dat ik gebruikte om anderen aan het denken te zetten. Als change agent faciliteer ik het creatieve proces, maar doe ik niet mee. Om anderen in de goede richting te sturen, gebruikte ik steeds een voorbeeldscenario die zij dan op hun eigen casus konden toepassen.",
+            "'Hoe kunnen wij rode planten verkopen?'",
+            "Rode planten zijn iets dat eigenlijk niet bestaat, maar voor de meeste wel aardig voor te stellen is. Rode planten zijn daarmee ook het uitgangspunt van mijn posterpresentatie over mijn ontwikkeling als change agent"
+         ],
+         "link": "https://issuu.com/ocmerpv/docs/ca_spreadless",
+         "images": [
+            "cacover.png",
+            "caposter.png"
+         ]
+      },
+      {
+         "id": "loch",
+         "name": "Loch BrandBook",
+         "desc": [
+            "Een brandbook voor het fictief merk 'Loch' dat ik heb gemaakt voor het concept 'journalen'.",
+            "A piece of mind for a peace of mind.",
+            "'Loch' komt uit de woorden 'logboek', 'lachen' en het Gaelische woord voor meer.",
+            "'Hoe je dag ook was, Loch het vast!'"
+         ],
+         "link": "https://issuu.com/ocmerpv/docs/b_s_spreadless",
+         "images": [
+            "loch.png",
+            "loch8.png",
+            "loch20.png"
+         ]
+      },
+      {
+         "id": "lief",
+         "name": "madelief not war",
+         "desc": [
+            "Madelief is een eigen merk dat ik aan het ontwikkelen ben om meer positiviteit in de wereld te brengen.",
+            "Madelief is begonnen als woordgrap op een project van een goede vriendin van mij. Ik pitchte bij haar de term 'made with liefde' en dat heb ik later gekoppeld aan de bekende spreuk 'make love, not war'. Wat centraal staat is de madelief: een symbool van liefde, groei en community. Samen met toepasselijke uitspraken en visuals wil ik die waarden delen met anderen.",
+            "De posters die je ziet zijn door mij ontworpen. Tijdens het maken van deze posters had ik nog geen idee van waar ik heen wilde gaan met het merk. Samen Autumn van Grol en onze designervrienden probeer ik daar een duidelijke richting in te krijgen.",
+            "Waar ik naartoe wil gaan is om iedereen het gevoel te geven wat iedereen nodig heeft, maar sommige hebben gemist. Het gevoel dat je er mag zijn, dat je er toe doet en dat je perfect bent zoals je bent. Die 'good mother messages'."
+         ],
+         "link": "https://madelief.remcopramudita.nl/",
+         "images": [
+            "madelief_muur_poster.png",
+            "madelief_muur_poster.png",
+            "madeliefposter.png",
+            "female_hoodie.png",
+            "gentle.png",
+            "tshirt_woman_2.png",
+            "madeliefhoodie.png",
+            "enough.png",
+            "liefmuismat.png",
+            "liefhartbloem.png"
+         ]
+      }
+   ]
+}

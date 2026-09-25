@@ -1,0 +1,15 @@
+{
+    "work": "hbih",
+    "name": "Het Bos in Huis",
+    "thumb": "bosinhuis_2.gif",
+    "desc": "Dit is het bos in huis js",
+    "process": "Dit is mijn proces js",
+    "mypart": "dit is mijn aandeel js",
+    "reflect": "dit is mijn reflectie js",
+    "images": [
+        "Screenshot_2021-07-05_130724.png",
+        "bever.png",
+        "Screenshot_2021-07-05_130901.png"
+    ],
+    "link": "https://lennart.xyz/bosinhuis/"
+}
