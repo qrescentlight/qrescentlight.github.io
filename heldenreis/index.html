@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rough Hero Journey</title>
+    <style>
+        #gridContainer,
+        .boxes {
+            animation: loadingScreen 2s ease-in;
+        }
+
+        .container {
+            all: unset;
+            display: flex;
+            align-items: center;
+        }
+
+        #gridContainer {
+            display: grid;
+            margin: auto;
+            margin-top: 3vh;
+            width: 112vh;
+            height: 84vh;
+            background-color: white;
+            border: 1px solid black;
+            grid-template-columns: 28vh 28vh 28vh 28vh;
+        }
+
+        #player {
+            display: flex;
+            position: fixed;
+            width: inherit;
+            height: inherit;
+            margin: auto;
+            background-size: contain;
+            font-size: 25vh;
+        }
+
+        .inherit {
+            all: inherit;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background: none;
+            height: 21vh;
+            width: 28vh;
+            background: lightgray;
+            background-size: contain;
+        }
+
+        .charBox1,
+        .charBox2 {
+            position: relative;
+            height: 40%;
+            width: 50%;
+            margin: auto;
+            margin-top: 40%;
+            box-sizing: border-box;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        .charBox1 {
+            transform: scaleX(-1);
+        }
+
+        @keyframes loadingScreen {
+            0% {
+                background-color: white;
+                opacity: 0%;
+            }
+        }
+
+        audio {
+            position: absolute;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <audio controls id="C">
+        <source src="audio/c5.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="D">
+        <source src="audio/d5.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="E">
+        <source src="audio/e5.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="F">
+        <source src="audio/f5.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="G">
+        <source src="audio/g5.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="A">
+        <source src="audio/a5.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="B">
+        <source src="audio/b5.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="vader">
+        <source src="audio/vader_jacob2000.ogg" type="audio/ogg" class="audio">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <div id="gridContainer">
+            <div class="boxes" id="box1">
+                <div id="b1Left" class="charBox1"></div>
+                <div id="b1Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box2">
+                <div id="b2Left" class="charBox1"></div>
+                <div id="b2Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box3">
+                <div id="b3Left" class="charBox1"></div>
+                <div id="b3Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box4">
+                <div id="b4Left" class="charBox1"></div>
+                <div id="b4Right" class="charBox2"></div>
+            </div>
+
+            <div class="boxes" id="box5">
+                <div id="b5Left" class="charBox1"></div>
+                <div id="b5Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box6">
+                <div id="b6Left" class="charBox1"></div>
+                <div id="b6Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box7">
+                <div id="b7Left" class="charBox1"></div>
+                <div id="b7Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box8">
+                <div id="b8Left" class="charBox1"></div>
+                <div id="b8Right" class="charBox2"></div>
+            </div>
+
+            <div class="boxes" id="box9">
+                <div id="b9Left" class="charBox1"></div>
+                <div id="b9Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box10">
+                <div id="b10Left" class="charBox1"></div>
+                <div id="b10Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box11">
+                <div id="b11Left" class="charBox1"></div>
+                <div id="b11Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box12">
+                <div id="b12Left" class="charBox1"></div>
+                <div id="b12Right" class="charBox2"></div>
+            </div>
+
+            <div class="boxes" id="box13">
+                <div id="b13Left" class="charBox1"></div>
+                <div id="b13Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box14">
+                <div id="b14Left" class="charBox1"></div>
+                <div id="b14Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box15">
+                <div id="b15Left" class="charBox1"></div>
+                <div id="b15Right" class="charBox2"></div>
+            </div>
+            <div class="boxes" id="box16">
+                <div id="b16Left" class="charBox1"></div>
+                <div id="b16Right" class="charBox2"></div>
+            </div>
+            <div id="player"></div>
+        </div>
+    </div>
+
+    <script defer>
+
+        // arrays for the changeable elements
+        let boxArray = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9", "box10", "box11", "box12", "box13", "box14", "box15", "box16"]
+        let leftArray = ["b1Left", "b2Left", "b3Left", "b4Left", "b5Left", "b6Left", "b7Left", "b8Left", "b9Left", "b10Left", "b11Left", "b12Left", "b13Left", "b14Left", "b15Left", "b16Left"];
+        let rightArray = ["b1Right", "b2Right", "b3Right", "b4Right", "b5Right", "b6Right", "b7Right", "b8Right", "b9Right", "b10Right", "b11Right", "b12Right", "b13Right", "b14Right", "b15Right", "b16Right"];
+                
+        // grabs the proper number in the arrays
+        let ba = -1;
+
+        // notes & numbers for the different paths
+        let choiceOne = ["CD", "GAGF", "A", "GA", "G"];
+        let choiceTwo = ["EC", "BA", "AA", "F"];
+        let choiceThree = ["EF", "CG", "B", "E"];
+        let choiceFour = ["G", "C", "BB", "D"];
+        let skip = ["note rest"];
+
+        // starting values
+        let sceneName = ["", "", "", ""];
+        let sceneBG = ["", "", "", ""];
+        let sceneChar1 = ["", "", "", ""];
+        let sceneChar2 = ["", "", "", ""];
+
+        // grabs the z
+        let kq;
+
+        // scene picker
+        function choiceFunction() {
+
+            // first row 1-4
+            if (ba == 0) {
+                scenePhase = "Ordinary World: ";
+                sceneName = ["skip", "farm", "forest", "city", "mountain"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/forestkleur.png)", "url(images/marktkleur.png)", "url(images/mountainkleur.png)"];
+                sceneChar1 = ["skip", "url(images/farmerclean.png)", "url(images/farmer&archer&mageclean.png)", "yellow", "black"];
+                sceneChar2 = ["skip", "black", "white", "green", "yellow"];
+            } else if (ba == 1) {
+                scenePhase = "Call to Adventure: ";
+                sceneName = ["skip", "attacked by troll", "greeted by old man", "witness a dragon", "discover innate magic"];
+                sceneBG = ["skip", "url(images/forestkleur.png)", "url(images/farmkleur.png)", "url(images/marktkleur.png)", "url(images/mountainkleur.png)"];
+                sceneChar1 = ["skip", "red", "url(images/farmerclean.png)", "yellow", "black"];
+                sceneChar2 = ["skip", "black", "url(images/mageclean.png)", "url(images/mageclean.png)", "yellow"];
+            } else if (ba == 2) {
+                scenePhase = "The Refusal: ";
+                sceneName = ["skip", "I can't leave", "the responsibility", "the wrong person", "these don't exist"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/marktkleur.png)", "url(images/forestkleur.png)"];
+                sceneChar1 = ["skip", "url(images/farmerclean.png)", "blue", "yellow", "black"];
+                sceneChar2 = ["skip", "url(images/mageclean.png)", "url(images/mageclean.png)", "green", "yellow"];
+            } else if (ba == 3) {
+                scenePhase = "Meeting the Mentor: ";
+                sceneName = ["skip", "learn to fly", "receive sword", "learn magic", "control nature"];
+                sceneBG = ["skip", "url(images/mountainkleur.png)", "url(images/farmkleur.png)", "url(images/marktkleur.png)", "url(images/forestkleur.png)"];
+                sceneChar1 = ["skip", "red", "url(images/farmerclean.png)", "yellow", "black"];
+                sceneChar2 = ["skip", "black", "url(images/mageclean.png)", "green", "yellow"];
+            }
+
+            // second row 5-8
+            else if (ba == 4) {
+                scenePhase = "Crossing the Threshold: ";
+                sceneName = ["skip", "fantasy forest", "modern city", "medieval city", "colonial village"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/marktkleur.png)", "url(images/forestkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "url(images/farmer&mageclean.png)", "black"];
+                sceneChar2 = ["skip", "black", "white", "green", "url(images/farmer&mageclean.png)"];
+            } else if (ba == 5) {
+                scenePhase = "";
+                sceneName = ["skip", "Enemy: troll", "Ally: wolf companion", "Ally: the princess", "Test: catch the thief"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/forestkleur.png)", "url(images/mountainkleur.png)", "url(images/marktkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "yellow", "url(images/farmer&mageclean.png)"];
+                sceneChar2 = ["skip", "black", "white", "green", "url(images/thiefclean.png)"];
+            } else if (ba == 6) {
+                scenePhase = "";
+                sceneName = ["skip", "Enemy: troll", "Test: mislead the wolves", "Ally: elven archer", "Test: fire magic"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/forestkleur.png)", "url(images/marktkleur.png)", "url(images/mountainkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "url(images/farmer&mageclean.png)", "black"];
+                sceneChar2 = ["skip", "black", "white", "url(images/archerclean.png)", "yellow"];
+            } else if (ba == 7) {
+                scenePhase = "";
+                sceneName = ["skip", "Test: catch thief", "Ally: the old knight", "Enemy: evil wizard", "Enemy: giant troll"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/forestkleur.png)", "url(images/mountainkleur.png)", "url(images/forestkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "yellow", "url(images/farmer&archer&mageclean.png)"];
+                sceneChar2 = ["skip", "black", "white", "green", "url(images/trollclean.png)"];
+            }
+
+            // third row 9-12
+            else if (ba == 8) {
+                scenePhase = "Approach the Inmost Cave: ";
+                sceneName = ["skip", "mountain", "wizard tower", "cave", "forest temple"];
+                sceneBG = ["skip", "url(images/mountainkleur.png)", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/forestkleur.png)"];
+                sceneChar1 = ["skip", "url(images/farmer&archer&mageclean.png)", "blue", "yellow", "black"];
+                sceneChar2 = ["skip", "black", "white", "green", "yellow"];
+            } else if (ba == 9) {
+                scenePhase = "The Ordeal: ";
+                sceneName = ["skip", "the grand wizard of evil", "the fire breathing dragon", "the giant cyclops", "the black knight"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/forestkleur.png)", "url(images/marktkleur.png)"];
+                sceneChar1 = ["skip", "red", "url(images/farmer&archer&mageclean.png)", "yellow", "black"];
+                sceneChar2 = ["skip", "black", "url(images/dragonclean.png)", "green", "yellow"];
+            } else if (ba == 10) {
+                scenePhase = "Beaten by: ";
+                sceneName = ["skip", "sword", "arrows", "city", "fire magic"];
+                sceneBG = ["skip", "url(images/mountainkleur.png)", "url(images/farmkleur.png)", "url(images/forestkleur.png)", "url(images/marktkleur.png)"];
+                sceneChar1 = ["skip", "url(images/farmer&archer&mageclean.png)", "blue", "yellow", "black"];
+                sceneChar2 = ["skip", "url(images/dragonclean.png)", "white", "green", "yellow"];
+            } else if (ba == 11) {
+                scenePhase = "The Reward: ";
+                sceneName = ["skip", "magical sword", "chest with gold", "ice staff", "freedom of the people"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/forestkleur.png)", "url(images/marktkleur.png)"];
+                sceneChar1 = ["skip", "red", "url(images/farmer&archer&mageclean.png)", "yellow", "black"];
+                sceneChar2 = ["skip", "black", "url(images/chestclean.png)", "green", "yellow"];
+            }
+
+            // forth row 13-16
+            else if (ba == 12) {
+                scenePhase = "The Road Back: ";
+                sceneName = ["skip", "the ice is thin", "the trolls attack", "a thief steals the gold", "the mountains are alive"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/forestkleur.png)", "url(images/forestkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "url(images/farmer&archer&mageclean.png)", "black"];
+                sceneChar2 = ["skip", "black", "white", "url(images/thiefclean.png)", "yellow"];
+            } else if (ba == 13) {
+                scenePhase = "The Roadblock: ";
+                sceneName = ["skip", "mad by power", "trolls need a place to live", "right versus love", "the people are poor"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/marktkleur.png)", "url(images/forestkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "yellow", "url(images/thiefclean.png)"];
+                sceneChar2 = ["skip", "black", "white", "green", "url(images/poorvillagersclean.png)"];
+            } else if (ba == 14) {
+                scenePhase = "The Resurrection: ";
+                sceneName = ["skip", "distance from powers", "not invincible", "let them go", "help them"];
+                sceneBG = ["skip", "url(images/farmkleur.png)", "url(images/mountainkleur.png)", "url(images/forestkleur.png)", "url(images/marktkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "url(images/farmer&archer&mageclean.png)", "black"];
+                sceneChar2 = ["skip", "black", "white", "url(images/poorvillagersclean.png)", "url(images/poorvillagersclean.png)"];
+            } else if (ba == 15) {
+                scenePhase = "The Return with the Elixir: ";
+                sceneName = ["useful powers", "new responsibilities", "help others", "popularity", "poor yet rich"];
+                sceneBG = ["skip", "url(images/mountainkleur.png)", "url(images/marktkleur.png)", "url(images/forestkleur.png)", "url(images/farmkleur.png)"];
+                sceneChar1 = ["skip", "red", "blue", "yellow", "url(images/farmer&archer&mageclean.png)"];
+                sceneChar2 = ["skip", "black", "white", "green", "yellow"];
+            }
+
+            // none of the rows --1 || 17+
+            else {
+                sceneName = ["", "", "", ""];
+                sceneBG = ["", "", "", ""];
+                sceneChar1 = ["", "", "", ""];
+                sceneChar2 = ["", "", "", ""];
+            }
+        }
+
+        // various options in a single variable for easy tweaking
+        const options = {
+            eventType: 'keydown',
+            t: 2000
+        }
+
+        keyMapper(updateBox, options);
+
+        function keyMapper(callback, options) {
+            const charList = 'awsdfgw ArrowLeft';
+            const eventType = options && options.eventType || 'keydown';
+            const t = options && options.t || 2000;
+
+            let boxBuffer = [];
+            let songBuffer = [];
+            let lastKeyTime = Date.now();
+
+            document.addEventListener(eventType, event => {
+
+                const key = event.key;
+                let note = key;
+
+                // key translation
+                if (key == "a") {
+                    note = "C";
+                    playAudio("C");
+                } else if (key == "w") {
+                    note = "D";
+                    playAudio("D");
+                } else if (key == "s") {
+                    note = "E";
+                    playAudio("E");
+                } else if (key == "d") {
+                    note = "F";
+                    playAudio("F");
+                } else if (key == "f") {
+                    note = "G";
+                    playAudio("G");
+                } else if (key == "g") {
+                    note = "A";
+                    playAudio("A");
+                } else if (key == "ArrowLeft") {
+                    note = "B";
+                    playAudio("B");
+                } else if (key == " ") {
+                    note = "note rest";
+                } else if (key == "ArrowUp") {
+                    window.location.reload();
+                } else if (key == "ArrowRight") {
+                    playVideo(songBuffer);
+                } else if (key == "ArrowDown") {
+                    document.getElementById("vader").play();
+                }
+
+                // we are only interested in alphanumeric keys
+                if (charList.indexOf(key) === -1) return;
+
+                const currentTime = Date.now();
+
+                if (currentTime - lastKeyTime > t) {
+                    
+                    // next box
+                    boxBuffer = [];
+                    ba += 1;
+                    lastKeyTime = currentTime;
+                    choiceFunction();
+                }
+
+
+                boxBuffer.push(note);
+                songBuffer.push(note);
+
+                callback(boxBuffer, ba);
+            })
+        }
+
+        function updateBox(keySequence, ba) {
+            keyPicker(keySequence, choiceOne);
+            keyPicker(keySequence, choiceTwo);
+            keyPicker(keySequence, choiceThree);
+            keyPicker(keySequence, choiceFour);
+            keyPicker(keySequence, skip);
+        }
+
+        function keyPicker(keySequence, choice) {
+            if (choice == choiceOne) {
+                kq = 1;
+            } else if (choice == choiceTwo) {
+                kq = 2;
+            } else if (choice == choiceThree) {
+                kq = 3;
+            } else if (choice == choiceFour) {
+                kq = 4;
+            } else if (choice == skip) {
+                kq = 0;
+            }
+
+            if (choice.includes(keySequence.join("")) == true) {
+                insertBox(ba, kq);
+            }
+        }
+
+        function insertBox(ba, kq) {
+            document.getElementById(boxArray[ba]).style.backgroundImage = sceneBG[kq];
+            document.getElementById(leftArray[ba]).style.backgroundImage = sceneChar1[kq];
+            document.getElementById(rightArray[ba]).style.backgroundImage = sceneChar2[kq];
+        }
+
+        function playVideo(bufferPB) {
+            ba = 0;
+            playBG(bufferPB);
+            document.getElementById("vader").play();
+        }
+
+        function playBG(bufferPB) {
+            document.getElementById("player").innerHTML = document.getElementById(boxArray[ba]).innerHTML;
+            document.getElementById("player").style.backgroundImage = document.getElementById(boxArray[ba]).style.backgroundImage;
+
+            setTimeout(next, 2000);
+        };
+
+        function next() {
+            if (ba < 16) {
+                ba += 1;
+                playBG()
+            }
+        }
+
+        function playAudio(pianoSound) {
+            let pianoAudio = document.getElementById(pianoSound);
+
+            if (pianoAudio.paused) {
+                pianoAudio.play();
+            } else {
+                pianoAudio.currentTime = 0.2;
+            }
+        }
+    </script>
+</body>
+
+</html>
