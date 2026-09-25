@@ -1,1 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Remco Pramudita</title>
+    <link rel="shortcut icon" href="images/bitlief.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://use.typekit.net/izt0eqk.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/style.css"
+      media="screen"
+    />
+    <script src="js/work.js" defer></script>
+    <script src="js/mouse.js" ></script>
+    <script src="js/background.js" ></script>
+    
+  </head>
 
+  <body class="scroll">
+    <nav>
+      <ul>
+        <li class="navLi">
+          <a href="#about" onclick="projectClose()" class="navA">over mij</a>
+        </li>
+        <li class="navLi">
+          <a href="#projects" onclick="projectClose()" class="navA"
+            >mijn werk</a
+          >
+        </li>
+        <li class="navLi">
+          <a href="#contact" onclick="projectClose()" class="navA">contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="mouseCont">
+      <div id="dropbox" class="mouse"></div>
+      <div id="mouse" class="mouse"></div>
+      <div id="double" class="mouse">
+        <div id="mouseOne"></div>
+        <div id="mouseTwo"></div>
+      </div>
+    </div>
+
+    <div>
+      <div id="name">
+        <a href="#">
+          <h1>Remco</h1>
+          <h1>Pramudita</h1>
+        </a>
+      </div>
+    </div>
+
+    <section id="landing" class="section">
+      <div id="artistBlock"></div>
+      <div id="artistText">
+        <h1>
+          Ik wil mijn
+          <span class="spanText"
+            ><div>mijn kennis, vaardigheden en ervaringen.</div>
+            kwaliteiten</span
+          >
+          als
+          <span class="spanText"
+            ><div>iemand die tastbare en ontastbare zaken vormgeeft.</div>
+            ontwerper</span
+          >
+          gebruiken om anderen te helpen met hun
+          <span class="spanText"
+            ><div>
+              de gezondheid van iemand op cognitief, emotioneel en sociaal vlak.
+            </div>
+            geestelijke gezondheid</span
+          >.
+        </h1>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <section id="aboutMore">
+        <div id="moreSkills" onclick="showSkills()">
+          <button id="skillBtn" onclick="showSkills()">vaardigheden</button>
+          <ul>
+            <li>Adobe Creative Suite</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Concepting</li>
+            <li>Illustraties</li>
+          </ul>
+        </div>
+      </section>
+      <section id="aboutLanding">
+        <div id="aboutIkBen">
+          <h1>
+            <span class="noshow show">Ik ben een</span>
+            <span class="spanText ikben"
+              ><div>
+                ik ben vaardig in o.a. de Adobe Creative Suite, BlockSmithXR &
+                AxureRP. Sinds kort ben ik ook begonnen met illustreren.
+              </div>
+              designer</span
+            >.
+          </h1>
+          <h1>
+            <span class="noshow">Ik ben een</span>
+            <span class="spanText ikben"
+              ><div>
+                ik ben vaardig in HTML, CSS & JavaScript, ik kan werken met JSON
+                en ik kan mijn eigen API maken en toepassen.
+              </div>
+              programmeur</span
+            >.
+          </h1>
+          <h1>
+            <span class="noshow">Ik ben een</span>
+            <span class="spanText ikben"
+              ><div>
+                ik weet hoe het is om mentaal door het leven te struggelen en
+                mij had enorm veel leed gespaard kunnen blijven als ik als kind
+                de juiste hulp had gekregen. Toen ik eindelijk die hulp had
+                gekregen, had ik er ook ontzettend veel aan.
+              </div>
+              ervaringsdeskundige</span
+            >.
+          </h1>
+          <h1>
+            <span class="noshow">Ik ben een</span>
+            <span class="spanText ikben"
+              ><div>
+                ik ben creatief, innovatief, analytisch en reflectief. Ik zet
+                niet snel aan tot doen, want ik ben een echte denker met een
+                growth-mindset.
+              </div>
+              plant</span
+            >.
+          </h1>
+        </div>
+
+        <div id="profilePic" class="pic"></div>
+
+        <div id="aboutIntro">
+          <p id="pIntro">
+            Ik droom van een wereld waar iedereen de hulp krijgt die ze nodig
+            hebben; een wereld waar elk persoon de ruimte krijgt om zichzelf te
+            zijn en te ontwikkelen; een wereld waar niemand zich zorgen hoeft te
+            maken over hun mentale welzijn.
+          </p>
+        </div>
+
+        <div class="padding" id="stageZin">
+          <h1>
+            Die
+            <span class="spanText"
+              ><div>
+                een wereld waar niemand zich zorgen hoeft te maken over hun
+                mentale welzijn.
+              </div>
+              wereld</span
+            >
+            begint bij
+            <span class="spanText"
+              ><div>
+                als ik wil dat er verandering moet komen, dan moet ik zelf het
+                goede voorbeeld laten zien
+              </div>
+              mijzelf</span
+            >.
+          </h1>
+        </div>
+
+        <div id="stagePic" class="pic"></div>
+
+        <div id="aboutStage">
+          <p id="pStage">
+            Ik weet hoe het is om in een wereld te leven waar dat niet het geval
+            is, en dat wens ik niemand toe. Als ik die wereld een werkelijkheid
+            wil zien worden, dan moet ik daar zelf mee beginnen. Daarom wil ik
+            mijn kennis, vaardigheden en ervaringen als designer gebruiken om
+            anderen te helpen met hun geestelijke gezondheid.
+          </p>
+        </div>
+
+        <div class="padding" id="skillsZin">
+          <h1>
+            Ik wil met mijn stage
+            <span class="spanText"
+              ><div>
+                wat voor soort ontwerpen en media ik als designer kan toepassen.
+              </div>
+              ontdekken</span
+            >
+            hoe een
+            <span class="spanText"
+              ><div>hoe ik tastbare en ontastbare zaken vorm kan geven.</div>
+              designer</span
+            >
+            anderen kan
+            <span class="spanText"
+              ><div>
+                wat ik kan betekenen voor het mentale welzijn van een ander.
+              </div>
+              helpen</span
+            >.
+          </h1>
+        </div>
+
+        <div id="aboutSkills">
+          <p id="pSkill">
+            Wat mij onderscheidt van andere designers is mijn grote liefde voor
+            programmeren en persoonlijke groei. Ik heb in anderhalf jaar gewerkt
+            met AR.js, een eigen api gemaakt en deze portfoliowebsite online
+            gezet. Daarnaast heb ik de ervaring als gebruiker van de
+            verschillende platformen. Het zijn die kwaliteiten die ik weet toe
+            te passen op mijn ontwerpen.
+          </p>
+
+          <p id="pLearn">
+            Ik zoek naar een stage waar ik kan ontdekken op welke verschillende
+            manieren ik design en mijn vaardigheden kan toepassen om anderen te
+            helpen. Daarnaast wil ik graag groeien als illustrator. Ik sta ook
+            open om te werken met nieuwe frameworks en om WordPress en PHP te
+            leren. Maar vooral wil ik graag iets kunnen betekenen voor anderen.
+          </p>
+        </div>
+
+        <div id="aboutCta" class="padding">
+          <h1 id="ctaZin">
+            Laten we
+            <span class="spanText"
+              ><div>wat jij en ik voor elkaar kunnen betekenen.</div>
+              samen</span
+            >
+            van deze
+            <span class="spanText"
+              ><div>
+                een wereld waar niemand zich zorgen hoeft te maken over hun
+                mentale welzijn.
+              </div>
+              wereld</span
+            >
+            een
+            <span class="spanText"
+              ><div>want elk stapje in de goede richting helpt.</div>
+              werkelijkheid</span
+            >
+            maken.
+          </h1>
+          <div id="ctaButtons">
+            <button>
+              <a href="mailto:r.p.vos@st.hanze.nl" target="_blank"> mail me </a>
+            </button>
+            <button><a href="#contact">contact</a></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="aboutMore"></section> -->
+    </section>
+    <section id="projects" class="section scroll">
+      <section id="projectsLanding">
+        <div class="title">
+          <h1>mijn werk</h1>
+        </div>
+        <ul id="work"></ul>
+      </section>
+
+      <section id="project" class="overlay">
+        <div id="projectClose">
+          <button onclick="projectClose()">
+            <a href="#projects">close</a>
+          </button>
+        </div>
+
+        <div id="projectHead">
+          <div class="pic nodeThumb" id="nodeThumb"></div>
+
+          <a class="nodeLink" target="_blank"><button>probeer me</button></a>
+        </div>
+
+        <div class="postheader">
+          <div id="projectTag">
+            <h1 id="nodeName" style="background: #0AB0F5; background-color: #0AB0F5;"></h1>
+            <p id="nodeDesc"></p>
+          </div>
+
+          <div id="projectText">
+            <p id="nodeProcess"></p>
+            <p id="nodeMypart"></p>
+            <p id="nodeReflect"></p>
+            <div id="nodeImages"></div>
+          </div>
+        </div>
+
+        <div id="projectButtons">
+          <button><a class="nodeLink" target="_blank">probeer me</a></button>
+          <button>
+            <a onclick="projectClose()" href="#projects">mijn werk</a>
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <section id="contact" class="section">
+      <ul id="contactOptions">
+        <li>
+          <a href="mailto:r.p.vos@st.hanze.nl" target="_blank"> mail me </a>
+        </li>
+        <!-- <li><a onclick="showDeets()">
+                    contactgegevens
+                </a></li> -->
+        <li>
+          <a href="https://www.instagram.com/remcopramudita/" target="_blank">
+            instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/remcopramudita/" target="_blank">
+            linkedin
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <script refer>
+      document.onload = projectClose();
+      // document.addEventListener("mousemove", handleMouseMove, false);
+      function projectClose() {
+        document.querySelector("body").style.overflowY = "scroll";
+        document.querySelector(".overlay").style.marginLeft = "100vw";
+        setTimeout;
+        // window.scrollTo("#projects");
+      }
+
+      // //spantext
+      // setTimeout(numRot, 1);
+      // const spanText = document.getElementsByClassName("spanText");
+
+      // function numRot() {
+      //     for (let i = 0; i < spanText.length; i++) {
+      //         spanText[i].style.animation = "artstat 2s ease-in-out";
+      //     } setTimeout(numOut, 2000);
+      // };
+
+      // function numOut() {
+      //     for (let i = 0; i < spanText.length; i++) {
+      //         spanText[i].style.animation = "";
+      //     } setTimeout(numRot, 1);
+      // };
+
+      //   function showSkills() {
+      //     var skill = document.getElementById("moreSkills");
+      //     var skillBound = skill.getBoundingClientRect();
+
+      //     if (skillBound.right <= 0) {
+      //       skill.style.left = "0vw";
+      //     } else if (skillBound.right >= 0) {
+      //       skill.style.left = "-15vw";
+      //     }
+      //   }
+
+      let spanAni = document.querySelectorAll(".spanText");
+
+      spanAni.forEach((el) => {
+        el.addEventListener("click", function () {
+          //   el.style.animation = "";
+          el.style.animation = "letter 1.5s";
+          setTimeout(() => {
+            el.style.animation = "";
+          }, 1501);
+
+          //   el.style.color = "red";
+        });
+      });
+
+      //   let navli = document.querySelectorAll("nav li");
+
+      //   navli.forEach(elem => {
+      //       elem.addEventListener("mouseover", function(){
+      //           elem.style.background = "orangered";
+      //           elem.style.mixBlendMode = "exclusion";
+      //       })
+      //   });
+    </script>
+  </body>
+</html>
